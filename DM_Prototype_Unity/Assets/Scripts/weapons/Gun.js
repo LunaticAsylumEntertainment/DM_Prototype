@@ -148,7 +148,8 @@ class Gun extends MonoBehaviour
 			{
 				if(shotingEmitter.transform.GetChild(i).name == "bullet_trace")
 				{
-					shottingParticles = shotingEmitter.transform.GetChild(i);
+					// Remove the bullets
+					//shottingParticles = shotingEmitter.transform.GetChild(i);
 					break;
 				}
 			}
@@ -179,7 +180,8 @@ class Gun extends MonoBehaviour
 					{
 						for(var i : int = 0; i < capsuleEmitter.Length; i++)
 						{
-							capsuleEmitter[i].Emit();
+							// Trying toi find bullets
+							//capsuleEmitter[i].Emit();
 						}
 					}
 					
@@ -250,8 +252,9 @@ class Gun extends MonoBehaviour
 	
 	function LaunchProjectile()
 	{
-		//Get the launch position (weapon related)
-		var camRay : Ray = cam.ScreenPointToRay(new Vector3(Screen.width * 0.5, Screen.height * 0.6, 0));
+		// Get the launch position (weapon related)
+		// Removed as direction is handled in the Fireball Script
+		// var camRay : Ray = cam.ScreenPointToRay(new Vector3(Screen.width * 0.5, Screen.height * 0.6, 0));
 		
 		var startPosition : Vector3;
 		
@@ -269,7 +272,8 @@ class Gun extends MonoBehaviour
 		var grenadeObj : Grenade = projectile.GetComponent("Grenade") as Grenade;
 		grenadeObj.soldierCamera = soldierCamera;
 		
-		projectile.transform.rotation = Quaternion.LookRotation(camRay.direction);
+		// Clearing unnecessary items
+		// projectile.transform.rotation = Quaternion.LookRotation(camRay.direction);
 		
 		var projectileRigidbody : Rigidbody = projectile.rigidbody;
 		

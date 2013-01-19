@@ -102,7 +102,7 @@ class SoldierController extends MonoBehaviour
 	{
         if(radarObject != null)
         {
-            radarObject.SetActiveRecursively(true);
+            radarObject.SetActive(true);
         }
 
         moveDir = Vector3.zero;
@@ -117,7 +117,7 @@ class SoldierController extends MonoBehaviour
 	{
         if(radarObject != null)
         {
-            radarObject.SetActiveRecursively(false);
+            radarObject.SetActive(false);
         }
 
         moveDir = Vector3.zero;
@@ -216,7 +216,7 @@ class SoldierController extends MonoBehaviour
 			idleTimer = 0.0;
 		}
 		
-		crouch |= dead;
+		crouch = dead;
 		
 		//Check if the user wants the soldier to walk
 		walk = (!Input.GetKey(KeyCode.LeftShift) && !dead) || moveDir == Vector3.zero || crouch;

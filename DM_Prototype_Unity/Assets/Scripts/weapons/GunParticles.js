@@ -26,7 +26,8 @@ class GunParticles extends MonoBehaviour
 		{
 			for(var i : int = 0; i < emitters.length; i++)
 			{
-				(emitters[i] as ParticleEmitter).emit = p_newState;
+				// Removing Bullets
+				//(emitters[i] as ParticleEmitter).emit = p_newState;
 			}
 		}
 	}
