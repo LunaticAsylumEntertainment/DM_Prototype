@@ -269,8 +269,8 @@ class Gun extends MonoBehaviour
 		
 		var projectile : GameObject = GameObject.Instantiate(projectilePrefab, startPosition, Quaternion.identity);
 		
-		var grenadeObj : Grenade = projectile.GetComponent("Grenade") as Grenade;
-		grenadeObj.soldierCamera = soldierCamera;
+		//var grenadeObj : Grenade = projectile.GetComponent("Grenade") as Grenade;
+		//grenadeObj.soldierCamera = soldierCamera;
 		
 		// Clearing unnecessary items
 		// projectile.transform.rotation = Quaternion.LookRotation(camRay.direction);
